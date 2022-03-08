@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+<title> login page </title>
+{% endblock %}
+{% block body %}
+<h2 class="text-center my-3"> Login Form </h2>
+<div class="container">
+<form action='' method='POST'>
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="inputAddress">Username</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Username" name="username">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Password</label>
+        <input type="password" class="form-control" id="password" name="pass">
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary my-3">Sign in</button>
+  </form>
+</div>
+{% endblock %}
